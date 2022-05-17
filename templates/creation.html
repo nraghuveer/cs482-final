@@ -1,0 +1,23 @@
+{% load static %}
+<html>
+  <head>
+    <link rel="stylesheet" href="{% static 'css/s.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}"/>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"></script>
+    <script src="{% static 'js/creation.js' %}"></script>
+  </head>
+<body>
+  {% csrf_token %}
+  <a href="/">HOME</a>
+  <table>
+	  <tr><td>First name:</td><td> <input name="first_name" type="text" id="first_name"/></td></tr>
+	  <tr><td>Last name:</td><td> <input type="text" id="last_name" name="last_name"/></td></tr>
+	  <tr><td>Email:</td><td> <input type="email" id="email" name="email"/></td></tr>
+  </table>
+	  <input type="submit" id="submit"/>
+	  <div id="message"></div>
+</body>
+</html>

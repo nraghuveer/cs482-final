@@ -1,0 +1,29 @@
+{% load static %}
+<html>
+  <head>
+    <link rel="stylesheet" href="{% static 'css/s.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}"/>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"></script>
+    <script src="{% static 'js/rent.js' %}"></script>
+  </head>
+<body>
+  {% csrf_token %}
+  <a href="/">HOME</a>
+  <br/>
+  <table>
+	  <tr><td>Email:</td><td> <input name="email" type="text" id="email"/></td></tr><tr><td>First Name: <span id="first_name"></span></tr><tr><td>Last Name: <span id="last_name"></span></tr></table>
+
+
+  <button id="submit" >submit</button>
+  <br/>
+  <h3>Rented Movies</h3>
+  <table id="rented"></table>
+  <h3>Available Movies</h3>
+  <table id="all"></table>
+  <br/>
+  <div id="message"></div>
+</body>
+</html>
